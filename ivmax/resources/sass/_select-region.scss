@@ -1,0 +1,40 @@
+.select__region__section {
+    background: url("images/select-region/select-region-background.png")
+        no-repeat center / cover;
+    min-height: 100vh;
+    width: 100vw;
+
+    .btn {
+        &.btn__region {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .select__region__section {
+        background: url("images/select-region/select-region-background-small.png")
+            no-repeat center / cover;
+
+        .logo__wrapper {
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+
+        h1 {
+            &.small {
+                font-size: 21px;
+            }
+        }
+
+        .btn {
+            &.btn__transparent {
+                display: block;
+                width: 240px;
+                font-size: 15px;
+            }
+        }
+    }
+}

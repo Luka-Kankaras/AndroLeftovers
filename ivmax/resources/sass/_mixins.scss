@@ -1,0 +1,36 @@
+@mixin circle {
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    filter: blur(50px);
+
+    @media (max-width: 991px) {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@mixin circle__blue {
+    @include circle;
+
+    background-color: rgba(0, 139, 181, 0.06);
+}
+
+@mixin circle__blue__light {
+    @include circle;
+
+    background-color: rgba(178, 116, 172, 0.9);
+}
+
+@mixin circle__gold {
+    @include circle;
+
+    background-color: rgba(230, 197, 177, 0.16);
+}
+
+@mixin circle__rose {
+    @include circle;
+
+    background-color: rgba(178, 116, 172, 0.09);
+}

@@ -1,0 +1,253 @@
+@media (min-width: 1400px) {
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1330px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1615px;
+    }
+}
+
+* {
+    word-break: break-word;
+}
+
+main {
+    overflow: hidden;
+    background: $white;
+}
+
+h1 {
+    font-family: SoraBold, Arial, Helvetica, sans-serif;
+    font-size: 65px;
+    color: $night-rider;
+
+    &.small {
+        font-size: 50px;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    span {
+        &.blue {
+            color: $bondi-blue;
+        }
+
+        &.gold {
+            color: $ivmax-gold;
+        }
+    }
+
+    &.smaller {
+        font-size: 40px;
+    }
+
+    &.gold {
+        color: $ivmax-gold;
+    }
+}
+
+h2 {
+    font-family: SoraBold, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: $night-rider;
+
+    &.big {
+        font-size: 50px;
+    }
+
+    &.small {
+        font-size: 20px;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    &.blue {
+        color: $bondi-blue;
+    }
+}
+
+h3 {
+    font-family: SoraBold, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: $night-rider;
+
+    &.white {
+        color: $white;
+    }
+
+    &.blue {
+        color: $bondi-blue;
+    }
+}
+
+p {
+    font-family: SoraLight, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: $night-rider;
+
+    &.big {
+        font-size: 25px;
+    }
+
+    &.middle {
+        font-size: 22px;
+    }
+
+    &.bold {
+        font-family: SoraBold, Arial, Helvetica, sans-serif;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    &.blue {
+        color: $ivmax-blue;
+    }
+}
+
+.btn {
+    width: fit-content;
+    font-family: SoraBold, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 35px;
+    padding: 0.75rem 2.5rem;
+    transition: all 0.3s;
+    border: 0;
+    box-shadow: unset !important;
+
+    &.btn__blue {
+        color: $white;
+        background-color: $bondi-blue;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.75) inset !important;
+            -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.75) inset !important;
+            -moz-box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.75) inset !important;
+        }
+    }
+
+    &.btn__white {
+        color: $bondi-blue;
+        background-color: $white;
+        padding: 0.75rem 4rem;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 2px rgba(30, 136, 196, 0.75) inset !important;
+            -webkit-box-shadow: 0px 0px 5px 2px rgba(30, 136, 196, 0.75) inset !important;
+            -moz-box-shadow: 0px 0px 5px 2px rgba(30, 136, 196, 0.75) inset !important;
+        }
+    }
+
+    &.btn__transparent {
+        width: 250px;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 12px;
+
+        &:hover {
+            background-color: $bondi-blue;
+            border: 1px solid $bondi-blue;
+        }
+    }
+
+    &:disabled {
+        &:hover {
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0) inset !important;
+        }
+    }
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+.img-wrap-big {
+    height: 100%;
+}
+
+.section__top {
+    margin-top: 106px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $white;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 35px;
+
+        &.big {
+            font-size: 40px;
+        }
+
+        &.small {
+            font-size: 35px;
+        }
+    }
+
+    h2 {
+        &.big {
+            font-size: 25px;
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+
+        &.big {
+            font-size: 18px;
+        }
+
+        &.middle {
+            font-size: 18px;
+        }
+    }
+
+    .img-wrap-big {
+        height: unset;
+    }
+
+    .section__top {
+        margin-top: 71px;
+    }
+}

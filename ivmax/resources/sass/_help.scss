@@ -1,0 +1,299 @@
+.section__general__info {
+    .blog__circle__1 {
+        @include circle__blue;
+
+        right: -500px;
+        top: 0rem;
+    }
+
+    .video__cover {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        max-width: 926px;
+    }
+}
+
+@media (max-width: 991px) {
+    .section__general__info {
+        .blog__circle__1 {
+            right: -200px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .section__general__info {
+        .video__cover {
+            width: calc(100% + 4rem);
+            margin-left: -2rem;
+            margin-right: -2rem;
+        }
+    }
+}
+
+.collapse__wrapper {
+    .card {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #c7c7c7;
+
+        .card-header {
+            background: transparent;
+            border-bottom: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .btn-link {
+        width: 100%;
+        text-decoration: none;
+        text-align: left;
+        border: 0;
+        outline: 0;
+        box-shadow: unset;
+
+        .line {
+            content: "";
+            position: absolute;
+            width: 3rem;
+            border-top: 3px solid $ivmax-blue;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .heading {
+            color: $ivmax-blue;
+            transition: all 0.3s;
+
+            &.heading__main {
+                padding-left: 4rem;
+            }
+        }
+
+        span {
+            &.plus,
+            &.minus {
+                position: absolute;
+            }
+
+            &.plus {
+                visibility: hidden;
+            }
+
+            &.minus {
+                visibility: visible;
+            }
+        }
+
+        &.collapsed {
+            .line {
+                width: 0;
+            }
+
+            .heading {
+                color: $night-rider;
+
+                &.heading__main {
+                    padding-left: 0;
+                }
+            }
+
+            &:hover {
+                .line {
+                    width: 3rem;
+                }
+
+                .heading {
+                    color: $ivmax-blue;
+
+                    &.heading__main {
+                        padding-left: 4rem;
+                    }
+                }
+            }
+
+            span {
+                &.plus {
+                    visibility: visible;
+                }
+
+                &.minus {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .collapse__wrapper {
+        .btn-link {
+            &.collapsed {
+                &:hover {
+                    .line {
+                        width: 0;
+                    }
+
+                    .heading {
+                        color: $night-rider;
+
+                        &.heading__main {
+                            padding-left: 0;
+                        }
+                    }
+                }
+
+                &.btn-link-small {
+                    &::after {
+                        top: -0.15rem;
+                        transform: rotate(135deg);
+                        color: $night-rider;
+                    }
+                }
+            }
+
+            &.btn-link-small {
+                display: flex;
+                justify-content: space-between;
+
+                &::after {
+                    border-style: solid;
+                    border-width: 0.15rem 0.15rem 0 0;
+                    content: "";
+                    display: inline-block;
+                    height: 0.45em;
+                    left: 0;
+                    position: relative;
+                    top: 0.15em;
+                    transform: rotate(-45deg);
+                    vertical-align: top;
+                    width: 0.45em;
+                    color: $ivmax-blue;
+                    transition: all 0.3s;
+                }
+
+                .heading__main {
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.section__contact {
+    .blue__background {
+        background-color: $ivmax-blue;
+        border-radius: 12px;
+    }
+
+    .contact__form {
+        label {
+            font-family: SoraBold, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: $white;
+        }
+
+        .input-wrap {
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            font-family: SoraLight, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: $white;
+            background-color: transparent;
+            border: 1px solid $white;
+            border-radius: 12px;
+            outline: 0;
+            padding: 0.75rem 1rem;
+
+            &::placeholder {
+                color: $white;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .blog__circle__2 {
+        @include circle__blue;
+
+        right: -500px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .section__contact {
+        .contact__form {
+            label,
+            input,
+            textarea {
+                font-size: 16px;
+            }
+        }
+
+        .contact__image {
+            max-width: 50%;
+        }
+
+        .blog__circle__2 {
+            right: unset;
+            bottom: unset;
+            top: -400px;
+            left: -200px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .section__contact {
+        .blue__background {
+            border-radius: unset;
+        }
+    }
+}
+
+.invalid-feedback {
+    font-family: SoraRegular, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: $white;
+}
+
+.spinner-border {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 1rem;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: all 0.2s ease-in-out;
+}
+
+.slide-right-enter {
+    transform: translateX(15%);
+    opacity: 0;
+}
+
+.slide-right-leave-to {
+    transform: translateX(-15%);
+    opacity: 0;
+}
+
+.slide-left-enter {
+    transform: translateX(-15%);
+    opacity: 0;
+}
+
+.slide-left-leave-to {
+    transform: translateX(15%);
+    opacity: 0;
+}

@@ -1,0 +1,128 @@
+footer {
+    background: url("images/footer-background.png") no-repeat center / cover,
+        linear-gradient(rgba(52, 52, 52, 255), rgba(52, 52, 52, 255));
+    overflow: hidden;
+
+    .contact-info,
+    .docs__links {
+        a {
+            text-decoration: none;
+            font-family: SoraLight, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: $white;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $ivmax-gold;
+            }
+        }
+
+        span {
+            &.line {
+                font-size: 18px;
+                color: $white;
+            }
+        }
+    }
+
+    h1 {
+        &.small {
+            font-size: 24px;
+        }
+    }
+
+    .newsletters-form {
+        width: 36rem;
+        max-width: 100%;
+        position: relative;
+
+        .input__email {
+            width: 100%;
+            font-family: SoraLight, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: $white;
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            border-bottom: 1px solid $ivmax-gold;
+            padding: 0.5rem 0;
+
+            &::placeholder {
+                opacity: 0.7;
+            }
+        }
+
+        .submit__email {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: rotate(-45deg);
+            }
+
+            &:disabled {
+                opacity: 0.7;
+
+                &:hover {
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    footer {
+        .logo__footer {
+            transform: scale(0.75);
+        }
+
+        .contact-info,
+        .docs__links {
+            a {
+                font-size: 16px;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        .newsletters-form {
+            width: 22rem;
+
+            .input__email {
+                font-size: 16px;
+            }
+
+            .submit__email {
+                transform: scale(0.75);
+
+                &:hover {
+                    transform: scale(0.75);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    footer {
+        .docs__links {
+            a {
+                display: block;
+            }
+
+            span {
+                &.line {
+                    display: none;
+                }
+            }
+        }
+    }
+}

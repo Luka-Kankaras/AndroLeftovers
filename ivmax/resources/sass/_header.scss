@@ -1,0 +1,148 @@
+.navbar {
+    background: linear-gradient(
+        rgba(243, 243, 243, 0.7),
+        rgba(243, 243, 243, 0.7)
+    );
+    backdrop-filter: blur(3px);
+    padding: 1.5rem 1rem;
+
+    .navbar-brand {
+        img {
+            width: 90%;
+            height: auto;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            font-family: SoraBold, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: $night-rider;
+            transition: all 0.3s;
+
+            &:hover,
+            &.active {
+                // opacity: 0.7;
+                color: $ivmax-blue;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 1rem;
+
+        .navbar-brand {
+            img {
+                width: 60%;
+            }
+        }
+
+        .navbar-nav {
+            .nav-link {
+                width: 100%;
+
+                &:hover,
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler-btn {
+        height: 20px;
+        border: 0 !important;
+        outline: 0 !important;
+        padding: 0 !important;
+        line-height: unset;
+        background: transparent !important;
+
+        /* btn */
+        .menu span:before,
+        .menu span:after {
+            position: absolute;
+            content: "";
+        }
+        .menu span,
+        .menu span:before,
+        .menu span:after {
+            width: 20px;
+            height: 2px;
+            background-color: $night-rider;
+            display: block;
+        }
+        .menu span:before {
+            margin-top: -7px;
+        }
+        .menu span:after {
+            margin-top: 7px;
+        }
+        /* --- btn --- */
+
+        /* example 5 */
+        .example5 span {
+            -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+        }
+
+        .example5 span:before {
+            -webkit-transition-property: margin, -webkit-transform;
+            transition-property: margin, transform;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-delay: 0.2s, 0s;
+            transition-delay: 0.2s, 0s;
+        }
+
+        .example5 span:after {
+            -webkit-transition-property: margin, -webkit-transform;
+            transition-property: margin, transform;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-delay: 0.2s, 0s;
+            transition-delay: 0.2s, 0s;
+        }
+
+        &.active {
+            /* example 5 */
+            .example5 span {
+                background-color: rgba(0, 0, 0, 0);
+                -webkit-transition-delay: 0.2s;
+                transition-delay: 0.2s;
+            }
+
+            .example5 span:before {
+                margin-top: 0;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition-delay: 0s, 0.2s;
+                transition-delay: 0s, 0.2s;
+            }
+
+            .example5 span:after {
+                margin-top: 0;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transition-delay: 0s, 0.2s;
+                transition-delay: 0s, 0.2s;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        .navbar-brand {
+            width: 60%;
+            max-width: 150px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

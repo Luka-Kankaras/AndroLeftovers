@@ -1,0 +1,42 @@
+.owl-stage {
+    display: flex;
+}
+
+.owl-item {
+    min-height: 100%;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.owl-nav button {
+        margin: 0 1rem;
+        border: 0;
+        outline: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .owl-nav {
+        margin-top: unset;
+    }
+
+    .owl-nav  button {
+        position: absolute;
+        top: calc(50% + 12.5px);
+        margin: unset;
+    }
+    
+    .owl-nav .owl-prev {
+        left: 0;
+        outline: 0;
+    }
+
+    .owl-nav .owl-next {
+        right: 0;
+        outline: 0;
+    }
+}
